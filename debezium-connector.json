@@ -1,0 +1,22 @@
+{
+  "name": "transactions-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "postgres",
+    "database.server.name": "transactions-postgres",
+    "topic.prefix": "transactions-postgres",
+    "schema.include.list": "public",
+    "table.include.list": "public.transactions",
+    "plugin.name": "pgoutput",
+    "slot.name": "transactions_slot",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.delete.handling.mode": "rewrite"
+  }
+}
