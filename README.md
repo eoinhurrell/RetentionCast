@@ -3,6 +3,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![GitHub latest commit](https://badgen.net/github/last-commit/eoinhurrell/retentioncast)](https://GitHub.com/eoinhurrell/retentioncast/commit/)
+
 Built using: Python, Postgres, Kafka, Debezium
 
 RetentionCast is a scalable, performant streaming, real-time analytics architecture intended to provide up-to-date predictions on when a customer is likely to be at-risk of churning based on their activity.
