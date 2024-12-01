@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Starting docker containers..."
+docker compose up -d
 
 # Wait for Debezium Connect to be ready
 echo "Waiting for Debezium Connect to be ready..."
