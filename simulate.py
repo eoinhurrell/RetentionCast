@@ -208,8 +208,8 @@ if __name__ == "__main__":
             n_users=1000,
             start_date=datetime.now() - timedelta(days=30),
             end_date=datetime.now(),
-            min_delay=0.1,
-            max_delay=0.3,
+            min_delay=0.01,
+            max_delay=0.1,
         )
 
         simulator.run_simulation()
