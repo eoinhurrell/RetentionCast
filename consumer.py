@@ -214,7 +214,7 @@ class RFMDebeziumConsumer:
                 new_retention_campaign_target_date = None
 
                 target_age = self.find_age_below_probability(
-                    current_rfm.frequency + 1, current_rfm.recency_days
+                    float(current_rfm.frequency + 1), float(current_rfm.recency_days)
                 )
                 if target_age:
                     new_retention_campaign_target_date = (
@@ -256,7 +256,7 @@ class RFMDebeziumConsumer:
                     frequency=0,
                     total_order_value=amount,
                     avg_order_value=amount,
-                    prediction_chance_alive=None,
+                    retention_campaign_target_date=None,
                     last_updated=datetime.now(),
                 )
 
@@ -265,7 +265,7 @@ class RFMDebeziumConsumer:
 
             if current_rfm:
                 logger.info(
-                    f"Updated RFM metrics for user {user_id}: {current_rfm.prediction_chance_alive}"
+                    f"Updated RFM metrics for user {user_id}: {current_rfm.retention_campaign_target_date}"
                 )
             else:
                 logger.info(f"Updated RFM metrics for user {user_id}")
