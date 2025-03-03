@@ -6,6 +6,7 @@
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 Built using: Python, Postgres, Kafka, Debezium
+Read the [blog post](https://www.eoinhurrell.com/posts/20250221-retentioncast/) about RetentionCast.
 
 RetentionCast is a scalable, performant streaming, real-time analytics architecture intended to provide up-to-date predictions on when a customer is likely to be at-risk of churning based on their activity.
 
@@ -40,12 +41,13 @@ Survival analysis for churn can be done using SQL, as detailed [here](https://ww
 
 ### Analytics table schema
 
-- first_purchase - time the customer was first seen
-- latest_purchase - time the customer made their most recent purchase
-- recency - the age of the customer when they made their most recent purchase, equal to the duration between their first purchase and their latest purchase
-- frequency - number of repeat purchases (one less than total purchases)
-- order_count - number of orders
-- order_value - total order value
+- `first_purchase_date`: When the customer first converted
+- `last_purchase_date`: When the customer made their most recent purchase
+- `frequency`: Number of repeat purchases
+- `total_order_value`
+- `avg_order_value`
+- `retention_campaign_target_date`: Updated byt the consumer.py, the date when the user's alive probability drops below 70%
+
 
 ### Advantages of this approach
 
@@ -60,11 +62,9 @@ Survival analysis for churn can be done using SQL, as detailed [here](https://ww
 
 ## Progress
 
-- TODO: Blogpost
 - TODO: documentation
+- TODO: frontend
 - TODO: Performance benchmarks
-- TODO: Deployment guides
-- TODO: Example use cases
 
 ## Running
 
