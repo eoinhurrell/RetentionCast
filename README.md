@@ -6,6 +6,7 @@
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 Built using: Python, Postgres, Kafka, Debezium
+
 Read the [blog post](https://www.eoinhurrell.com/posts/20250221-retentioncast/) about RetentionCast.
 
 RetentionCast is a scalable, performant streaming, real-time analytics architecture intended to provide up-to-date predictions on when a customer is likely to be at-risk of churning based on their activity.
